@@ -1,20 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP CUSTOM FRAMEWORK</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title><?= $this->title ?></title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="<?= asset('assets/plugins/fontawesome-free/css/all.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('assets/dist/css/adminlte.min.css') ?>">
 </head>
 
-<body>
-
-    <div class="container">
-        {{content}}
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <b>Admin</b>LTE
+        </div>
+        <div class="container">
+            {{content}}
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="<?= asset('assets/plugins/jquery/jquery.min.js') ?>"></script>
+    <script src="<?= asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= asset('assets/dist/js/adminlte.min.js') ?>"></script>
 </body>
 
 </html>

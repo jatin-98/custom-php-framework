@@ -3,13 +3,17 @@
     "autoload": {
         "psr-4": {
             "App\\": "./"
-        }
+        }, 
+        "files":[
+            "helpers/helper.php"
+        ]
     },
     "authors": [
         {
             "name": "jchauhan",
             "email": "jchauhan@bamko.net"
         }
+       
     ],
     "require": {
         "vlucas/phpdotenv": "^5.5"

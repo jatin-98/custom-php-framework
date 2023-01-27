@@ -1,27 +1,47 @@
 <?php $this->title = 'Contact'; ?>
 
-<h1>CONTACT FORM</h1>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12 text-center">
+                <h1>Contact us</h1>
+            </div>
+        </div>
+    </div>
+</section>
 
-<form method="POST">
-    <div class="form-group">
-        <label>Name</label>
-        <input type="text" class="form-control" name="name">
+<section class="content">
+    <div class="card">
+        <div class="card-body row">
+            <div class="col-5 text-center d-flex align-items-center justify-content-center">
+                <div class="">
+                    <h2>Admin<strong>LTE</strong></h2>
+                    <p class="lead mb-5">123 Testing Ave, Testtown, 9876 NA<br>
+                        Phone: +1 234 56789012
+                    </p>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" id="inputName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">E-Mail</label>
+                    <input type="email" id="inputEmail" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="inputSubject">Subject</label>
+                    <input type="text" id="inputSubject" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea id="inputMessage" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Send message">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label>Example select</label>
-        <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>  
-            <option>5</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label>Subject</label>
-        <textarea class="form-control" rows="3" name="subject"></textarea>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submot">Submit</button>
-    </div>
-</form>
+</section>
