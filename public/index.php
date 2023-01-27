@@ -1,14 +1,16 @@
 <?php
 
-
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../constants.php';
+
+!file_exists(dirname(__DIR__) . '/.env') ? die("Please create a file .env at root from env.example") : '';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
-$config = include '../config/db.php';
+$configfiles = loadFileData(_CONFIG_DIR);
 
-$app = new App\Core\Application(dirname(__DIR__), $config);
+$app = new App\Core\Application(dirname(__DIR__), $configfiles);
 
 $app->router->get('/', [App\Controllers\HomeController::class, 'index']);
 $app->router->get('/login', [App\Controllers\AuthController::class, 'login']);
